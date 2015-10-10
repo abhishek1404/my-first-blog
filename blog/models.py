@@ -6,6 +6,7 @@ class Post(models.Model):
 	author=models.ForeignKey('auth.User')
 	title=models.CharField(max_length=200)
 	text=models.TextField()
+	video=models.TextField(default='')
 	Created_date=models.DateTimeField(default=timezone.now)
 	Published_Date=models.DateTimeField(blank=True,null=True)
 

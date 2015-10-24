@@ -43,5 +43,5 @@ def text_page(request):
 		return HttpResponse('Please submit a search term.')
 
 
-
+#Author	type_p	title	description	tags	country	language	video	videorelease_date	Published-Date
 

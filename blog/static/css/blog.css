@@ -1,6 +1,4 @@
-h1 a {
-    color: #FC0005;
-}
+
 
 body {
     padding-left: 5px;
@@ -8,11 +6,12 @@ body {
 
 
 .page-header {
+
     width:98%;
     height:85px;
     top:0px;
     position: fixed;
-    background-color: #005600;
+    background-color: #3b5998;
     z-index: 1;margin:0 auto;
 }
 
@@ -30,10 +29,12 @@ body {
 
 
 h1{
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster' ;
+    
 }
 h4{
     font-size: 1.5em;
+    
 }
 span{
     display:inline-block;
@@ -41,6 +42,24 @@ span{
     white-space: nowrap;
     overflow:hidden !important;
     text-overflow: ellipsis;
+    
+}
+/* unvisited link */
+a:link {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #dd6666;
+    text-decoration:none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #66aa66;
+    text-decoration: underline
 }
 /*XXX=====================================*/
 .page_title {
@@ -70,7 +89,7 @@ ul.tileMe li {
     display: inline-block;
     padding: 10px;
     margin: 0 0 2.5% 2.5%;
-    background: #fff;
+    
     border: 1px solid #ddd;
     font-size: 16px;
     font-size: 1rem;
@@ -101,7 +120,7 @@ ul.s_result li {
     display: inline-block;
     padding: 10px;
     margin: 0 0 2.5% 2.5%;
-    background: #fff;
+    
     border: 1px solid #ddd;
     font-size: 16px;
     font-size: 1rem;

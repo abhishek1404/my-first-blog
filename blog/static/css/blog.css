@@ -1,14 +1,19 @@
 h1 a {
-    color: #FCA205;
+    color: #FC0005;
 }
 
 body {
-    padding-left: 15px;
+    padding-left: 5px;
 }
+
+
 .page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    width:98%;
+    height:85px;
+    top:0px;
+    position: fixed;
+    background-color: #005600;
+    z-index: 1;margin:0 auto;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -17,40 +22,101 @@ body {
     text-decoration: none;
 }
 
-.content {
-    margin-left: 40px;
+.row {
+    float:left;
+    margin-top: 120px;
+    
 }
 
 
-h1, h2, h3, h4 {
+h1{
     font-family: 'Lobster', cursive;
 }
+h4{
+    font-size: 1.5em;
+}
+span{
+    display:inline-block;
+    width:220pt;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+/*XXX=====================================*/
+.page_title {
+    margin-left: 20px;
+    width: 45%;
+    height:auto;
+    background: auto;
+    float: left;
+}
+.search {
+    margin-top: 40px;
+    margin-left: 45%;
+    height:auto;
+    background: auto;
+    
+}
+/*=============================
+===================================*/
+ul.tileMe {
 
-.date {
-    float: right;
-    color: #828282;
+    list-style: none;
+    font-size: 0px;
+    margin-left: 2.5%; /* should match li left margin */
+}
+ul.tileMe li {
+    width:250pt;
+    display: inline-block;
+    padding: 10px;
+    margin: 0 0 2.5% 2.5%;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-size: 1rem;
+    vertical-align: top;
+    box-shadow: 0 0 5px #ddd;
+    
+    
 }
 
-.save {
-    float: right;
+ul.tileMe.columns-3 li {
+    width: 30.83%; 
+}
+ul.tileMe li img {
+    width: 220pt;
+   height: 105pt;
+    margin-left: auto;
 }
 
-.post-form textarea, .post-form input {
-    width: 100%;
+/*search result ========================*/
+ul.s_result {
+    
+    list-style: none;
+    font-size: 0px;
+    margin-left: 2.5%; /* should match li left margin */
+}
+ul.s_result li {
+    width:600pt;
+    display: inline-block;
+    padding: 10px;
+    margin: 0 0 2.5% 2.5%;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-size: 1rem;
+    vertical-align: top;
+    box-shadow: 0 0 5px #ddd;
+    
+    
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-}
 
-.post {
-    margin-bottom: 70px;
+ul.s_result li img {
+    width: 588pt;
+   height: 360pt;
+    margin-left:  auto;
 }
+ul.s_result iframe{ width: 98%; height: 360pt }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
-}
 

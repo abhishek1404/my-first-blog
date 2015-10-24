@@ -1,15 +1,32 @@
-{% extends "blog/base.html" %}
-{% block content %}
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        <p>published: {{ post.Published_Date }}</p>
-                    </div>
-                    
-<iframe width="660" height="415" src={{post.video}} modestbranding=1&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-		<h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaks }}</p>
-                </div>
-            {% endfor %}
-{% endblock content %}
-        
+	{% extends "blog/base.html" %}
+	{% block content %}
+
+
+    
+<ul class="tileMe">
+	            {% for post in posts %}
+	            
+	                <li>
+	                    
+	                 {% if post.type_p == "video" %} 
+
+	<iframe src="{{post.video}}?modestbranding=1&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+			<h4><a href="{% url 'video_page' %}?name={{post.title}}"><span>{{ post.title }}</span></a></h4>
+	                    
+	                
+
+	                 {% else%} 
+	                 <a href="{% url 'text_page' %}?name={{post.title}}"><img  src="{{post.image}}" ></a>	<h4><a href="{% url 'text_page' %}?name={{post.title}}"><span>{{ post.title }}</span></a></h4>
+	                    
+	                 {%endif %} 
+	                 <div class="date">
+	                        <p>published: {{ post.Published_Date }}</p>
+	                  </div>
+	</li>
+	            {% endfor %}
+
+	            </ul>
+	{% endblock content %}
+	        

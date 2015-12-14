@@ -1,0 +1,12 @@
+
+
+{% extends "news/base.html" %}
+<div class="section-content"><div class="section-inner layoutSingleColumn"><h3 name="1bee" class="graf--h3 graf--first"><span class="defaultValue defaultValue--root">Title</span><br></h3><p name="ee1f" class="graf--p graf-after--h3 graf--last is-selected"><span class="defaultValue defaultValue--root">Tell your story…</span><br></p></div></div>
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+        

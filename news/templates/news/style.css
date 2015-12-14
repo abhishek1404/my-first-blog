@@ -1,0 +1,64 @@
+
+.topContainer {
+	background: url(https://d262ilb51hltx0.cloudfront.net/max/1400/1*KUS2RTvJkcNy-DF_fAJPxQ.jpeg);
+	background-repeat: no-repeat;
+	padding: 475px;
+	
+}
+
+.topText {
+	color: #fff;
+	font-family: helvetica;
+	font-size: 1.7em;
+	text-align: center;
+
+}
+
+p {
+	font-size: 1.35em;
+	font-family: serif;
+	margin: 0 24%;
+	color: gray;
+
+}
+
+.dash {
+	border-bottom: 1px solid;
+	border-color: #d6d6d6;
+	width: 9%;
+	margin-left: 45%;
+	padding-top: 3%;
+}
+
+.button {
+	background: transparent;
+	border: green 1px solid;
+	width: 141px;
+	height: 27px;
+	padding: 10px;
+	margin: 5% 24% 0 24%;
+	color: green;
+	border-radius: 2em;
+	transition: padding 0.35s ease;
+	display: inline-block;
+	font-size: 1.25em;
+
+	}
+
+.button:hover {
+	cursor: pointer;
+	color: gray;
+
+}
+.recommend {
+	color: green;
+	text-align: center;
+	margin: 0 0 7% 5%;
+	display: inline-block;
+}
+
+.fa-heart {
+	color: green;
+	display: inline-block;
+
+}

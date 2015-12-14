@@ -1,0 +1,24 @@
+	{% extends "news/base.html" %}
+	{% block content %}
+
+<!-- First Blog Post -->
+
+{% for post in posts %}
+                <h2>
+                    <a href="{% url 'post_article' %}?name={{post.pk}}">{{post.title}}</a>
+                </h2>
+                <p class="lead">
+                    by <a href="index.php">{{post.author}}}</a>
+                <span class="glyphicon glyphicon-time"></span> 
+                Posted on {{post.created}}</p>
+                
+                <hr>
+                <p style="margin:20px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                {{post.content|safe|truncatewords:50}}</p><p> ...............</p>
+                <a class="btn btn-primary" href="{% url 'post_article' %}?name={{post.pk}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                <hr>
+
+             {% endfor%}   
+	{% endblock content %}
+	        

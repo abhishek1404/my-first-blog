@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inline Text Editor</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" rel="stylesheet">
+    <link href="css/styles.css" media="all" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 inline-editor">
+          {% block content %}
+    <h1>New post</h1>
+    <form method="POST" action='.' style="border:none" type="text" class="post-form">{% csrf_token %}
+        <table border="0">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Save"></form>
+    {% endblock %}
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

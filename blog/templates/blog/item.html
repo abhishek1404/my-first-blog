@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="file">
+           
+                 {% if post.type_p == "video" %} 
+<iframe width="800" height="500" src="{{post.video}}?autoplay=1" frameborder="0" allowfullscreen></iframe>                 
+
+                 {% else%} 
+                <div><img width="800" height="500" src="{{post.image}}" frameborder="0" allowfullscreen></a><h4><a href="">{{ post.title }}</a></h4>
+                <p>{{post.content|safe}}</p> </div>
+                    
+                 {%endif %} 
+ 
+</div>
+<div class="side-column">
+<ul class="side-bar">
+<li>
+<iframe width="220" height="120" src="https://www.youtube.com/embed/eHOc-4D7MjY" frameborder="0" allowfullscreen></iframe>
+</li>
+<li>
+<iframe width="220" height="120" src="https://www.youtube.com/embed/eHOc-4D7MjY" frameborder="0" allowfullscreen></iframe>
+</li>
+<li>
+<iframe width="220" height="120" src="https://www.youtube.com/embed/eHOc-4D7MjY" frameborder="0" allowfullscreen></iframe>
+</li>
+<li>
+<iframe width="220" height="120" src="https://www.youtube.com/embed/eHOc-4D7MjY" frameborder="0" allowfullscreen></iframe>
+</li>
+<li>
+<iframe width="220" height="120" src="https://www.youtube.com/embed/eHOc-4D7MjY" frameborder="0" allowfullscreen></iframe>
+</li>
+</ul>
+</div>
+            
+{% endblock content %}
+
+
+
+
+
+
+

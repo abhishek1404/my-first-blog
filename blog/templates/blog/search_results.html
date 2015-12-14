@@ -1,0 +1,33 @@
+	{% extends "blog/base.html" %}
+	{% block content %}
+
+
+    
+<ul class="s_result">
+	            {% for post in posts %}
+	            
+	                <li>
+	                    
+	                 {% if post.type_p == "video" %} 
+<div class="s_result1">
+	<iframe src="{{post.video}}?modestbranding=1&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+<div class="s_result2">
+			<h4><a href="{% url 'video_page' %}?name={{post.title}}"><span>{{ post.title }}</span></a></h4></div>
+	                    
+	                
+
+	                 {% else%} <div class="s_result1">
+	                 <a href="{% url 'text_page' %}?name={{post.title}}"><img  src="{{post.image}}" ></a></div>	<div class="s_result2"><h4><a href="{% url 'text_page' %}?name={{post.title}}"><span>{{ post.title }}</span></a></h4></div>
+	                    
+	                 {%endif %} 
+	                 <div class="date">
+	                        <p>published: {{ post.Published_Date }}</p>
+	                  </div>
+	</li>
+	            {% endfor %}
+
+	            </ul>
+	{% endblock content %}
+	        
